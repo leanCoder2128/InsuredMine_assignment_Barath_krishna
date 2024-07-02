@@ -1,0 +1,28 @@
+<app-star-wars-nav-bar></app-star-wars-nav-bar>
+
+<div class="row homeScreen">
+  <div class="col-md-3 col-md-4 col-sm-12">
+    <div class="card mainLayout">
+      <div class="filterArea">
+        <div class="filterText">filters</div>
+        <div class="filters">
+          <ng-container *ngFor="let fo of filterOptions"> 
+            <div class="filterOption">
+                <select name="cars" id="cars">
+                    <option value="volvo">Movie Name</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                  </select>
+            </div>
+          </ng-container>
+        </div>
+        <div>
+          <button class="search_button">search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-md-4 col-sm-12">right</div>
+</div>

@@ -1,0 +1,45 @@
+.homeScreen {
+  margin: 60px 60px 0;
+  .mainLayout {
+    max-width: 60%;
+    height: 35rem;
+    border-radius: 0px;
+    .filterArea {
+      text-align: center;
+      margin: 25px 0 0 0;
+      .filterText {
+        color: #399e66db;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: x-large;
+      }
+
+      .filters {
+        .filterOption {
+          select {
+            border-radius: 5px;
+            width: 50%;
+            background: #ddd;
+            color: #399e66db;
+            padding: 10px;
+            font-weight: 600;
+            font-size: x-large;
+            text-align: center;
+            margin: 15px;
+          }
+        }
+      }
+
+      .search_button {
+        width: 33%;
+        background-color: white;
+        text-transform: uppercase;
+        border-color: #399e66db;
+        color: #399e66db;
+        padding: 6px;
+        font-weight: 600;
+        font-size: medium;
+      }
+    }
+  }
+}
