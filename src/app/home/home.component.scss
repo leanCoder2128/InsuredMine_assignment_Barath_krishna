@@ -1,29 +1,21 @@
 .homeScreen {
   margin: 60px 60px 0;
+  justify-content: space-between;
   .mainLayout {
-    max-width: 60%;
     height: 35rem;
     border-radius: 0px;
     .filterArea {
       text-align: center;
       margin: 25px 0 0 0;
-      .filterText {
-        color: #399e66db;
-        text-transform: uppercase;
-        font-weight: bolder;
-        font-size: x-large;
-      }
-
       .filters {
         .filterOption {
           select {
             border-radius: 5px;
-            width: 50%;
             background: #ddd;
             color: #399e66db;
-            padding: 10px;
+            padding: 6px;
             font-weight: 600;
-            font-size: x-large;
+            font-size: 18px;
             text-align: center;
             margin: 15px;
           }
@@ -42,4 +34,33 @@
       }
     }
   }
+  .right_side{
+    background: #fff;
+    width: 66%;
+    padding: 30px;
+    overflow-y: scroll;
+    height: 85vh;
+  }
+  .filterText {
+    color: #399e66db;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+
+  table td{
+    border:4px solid rgb(253 248 248);
+    background-color: rgb(219 192 192 / 54%);
+    cursor: pointer;
+  }
+  table th {
+    border:4px solid rgb(253 248 248);
+    background-color: rgba(215, 214, 214, 0.723);
+  }
+  
+  .paginate{
+    display: flex;
+    justify-content: end;
+  }
+
 }

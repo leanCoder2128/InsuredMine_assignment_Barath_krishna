@@ -1,0 +1,98 @@
+.homeScreen {
+    margin: 60px 60px 0;
+    justify-content: space-between;
+    .mainLayout {
+      height: 35rem;
+      border-radius: 0px;
+      .filterArea {
+        text-align: center;
+        margin: 25px 0 0 0;
+        .filters {
+          .filterOption {
+            select {
+              border-radius: 5px;
+              background: #ddd;
+              color: #399e66db;
+              padding: 6px;
+              font-weight: 600;
+              font-size: 18px;
+              text-align: center;
+              margin: 15px;
+            }
+          }
+        }
+  
+        .search_button {
+          width: 33%;
+          background-color: white;
+          text-transform: uppercase;
+          border-color: #399e66db;
+          color: #399e66db;
+          padding: 6px;
+          font-weight: 600;
+          font-size: medium;
+        }
+      }
+    }
+    .right_side{
+      background: #fff;
+      width: 66%;
+      padding: 30px;
+      overflow-y: scroll;
+    height: 85vh;
+    }
+    .filterText {
+      color: #399e66db;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: x-large;
+    }
+  
+    table td{
+      border:4px solid rgb(253 248 248);
+      background-color: rgb(219 192 192 / 54%);
+      cursor: pointer;
+    }
+    table th {
+      border:4px solid rgb(253 248 248);
+      background-color: rgba(215, 214, 214, 0.723);
+    }
+    
+  
+  }
+
+  .profile{
+    text-align: start;
+    padding: 40px;
+    line-height: 28px;
+    .col{
+        color: grey;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: italic;
+    }
+  }
+
+  .main_content{
+    color: grey;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .list_Ui{
+    background-color: #80808047;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .filterText {
+    color: #399e66db;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+
+  

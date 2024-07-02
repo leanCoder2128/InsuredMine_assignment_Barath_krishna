@@ -3,17 +3,22 @@ import { APCommonModule } from '../shared/components/app-common.module';
 import { StarWarsNavBarComponent } from '../shared/components/app-nav-bar.component';
 import { FilterOptions } from '../shared/model';
 import { CommonModule } from '@angular/common';
+import { data } from './modal';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start-wars-home',
   templateUrl: 'home.component.html',
   styleUrl: 'home.component.scss',
   standalone: true,
-  imports: [APCommonModule, StarWarsNavBarComponent,CommonModule],
+  imports: [APCommonModule, StarWarsNavBarComponent, CommonModule],
 })
 export class HomeComponent implements OnInit {
   filterOptions: FilterOptions[] = [];
-  constructor() {}
+  rowsPerPage = 25;
+  currentPage = 1;
+  arrayList = data;
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.filterOptions = [
@@ -38,5 +43,10 @@ export class HomeComponent implements OnInit {
         filterTitleId: 5,
       },
     ];
+  }
+
+  gotoProfile(item: any) {
+    console.log(item, 'item');
+    this.router.navigate([`/profile/${item.id}`]);
   }
 }

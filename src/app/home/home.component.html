@@ -6,14 +6,14 @@
       <div class="filterArea">
         <div class="filterText">filters</div>
         <div class="filters">
-          <ng-container *ngFor="let fo of filterOptions"> 
+          <ng-container *ngFor="let fo of filterOptions">
             <div class="filterOption">
-                <select name="cars" id="cars">
-                    <option value="volvo">Movie Name</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
+              <select name="cars" id="cars">
+                <option value="volvo">Movie Name</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
             </div>
           </ng-container>
         </div>
@@ -24,5 +24,47 @@
     </div>
   </div>
 
-  <div class="col-md-3 col-md-4 col-sm-12">right</div>
+  <div class="col-md-3 col-md-4 col-sm-12 right_side">
+    <div class="filterText">Search</div>
+    <div>content</div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of arrayList" (click)="gotoProfile(item)">
+          <td>{{ item.id }}</td>
+          <td>{{ item.first_name }}{{ item.last_name }}</td>
+          <td>{{ item.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="paginate">
+      <nav>
+        <ul class="pagination" id="pagination">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">«</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">»</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </div>
