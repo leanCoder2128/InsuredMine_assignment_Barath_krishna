@@ -22,18 +22,20 @@
           </svg>
         </div>
         <div class="profile">
-          <div class="col">Name : Mani</div>
-          <div class="col">Height: 116cm</div>
-          <div class="col">Weight: 64kg</div>
-          <div class="col">Created Dt/Time: 2024-07-02</div>
-          <div class="col">Updated Dt/Time: 2024-07-02</div>
-          <div class="col">Eye Color: Brown</div>
-          <div class="col">Skin Color: Golden Brown</div>
-          <div class="col">Hair Color: Black</div>
-        </div>
-        <div class="profile">
-          <div class="main_content">Panet Name : Manikandan</div>
-          <div>Panet Name : Manikandan</div>
+          <div class="col">Name : {{ PeopleInformation.name }}</div>
+          <div class="col">Height: {{ PeopleInformation.height }}</div>
+          <div class="col">Weight: {{ PeopleInformation.mass }}</div>
+          <div class="col">
+            Created Dt/Time:
+            {{ PeopleInformation.created | date : "dd-MM-YYYY" }}
+          </div>
+          <div class="col">
+            Updated Dt/Time:
+            {{ PeopleInformation.edited | date : "dd-MM-YYYY" }}
+          </div>
+          <div class="col">Eye Color: {{ PeopleInformation.eye_color }}</div>
+          <div class="col">Skin Color: {{ PeopleInformation.skin_color }}</div>
+          <div class="col">Hair Color: {{ PeopleInformation.hair_color }}</div>
         </div>
       </div>
     </div>
@@ -41,43 +43,41 @@
 
   <div class="col-md-3 col-md-4 col-sm-12 right_side">
     <div>
-        <div class="filterText">{{film[0].type}}</div>
-        <!--contentLoad-->
-        <div>
-
-          <div *ngFor="let data of film;let i = index">
-              <div class="list_Ui">
-                <div>{{data.name}}</div>
-                <div>{{data.time}}</div>
-                <div>{{data.Price}}</div>
-              </div>
+      <div class="filterText">Films</div>
+      <!--contentLoad-->
+      <div>
+        <div *ngFor="let film of filmDetail; let i = index">
+          <div class="list_Ui">
+            <div>Title : {{ film.title }}</div>
+            <div>Director : {{ film.director }}</div>
+            <div>Producer : {{ film.producer }}</div>
+            <div>Release date : {{ film.release_date | date }}</div>
           </div>
         </div>
+      </div>
     </div>
 
     <div>
-      <div class="filterText">{{ships[0].type}}</div>
-      <!--contentLoad-->
-      <div>
-
-        <div *ngFor="let data of ships;let i = index">
-            <div class="list_Ui">
-              <div>{{data.name}}</div>
-            </div>
+      <div class="filterText">Vehicle</div>
+      <div >
+        <div *ngFor="let vehicle of vehicleDetail; let i = index">
+          <div class="list_Ui">
+            <div>{{ vehicle }}</div>
+          </div>
         </div>
       </div>
-  </div>
+    </div>
 
-  <div>
-    <div>{{vehicles[0].type}}</div>
-    <!--contentLoad-->
-    <div class="filterText">
-      <div *ngFor="let data of vehicles;let i = index">
+        <div>
+      <div class="filterText">Starships</div>
+      <div>
+        <div *ngFor="let start of starShipDetail; let i = index">
           <div class="list_Ui">
-            <div>{{data.name}}</div>
+            <div>{{ start }}</div>
           </div>
+        </div>
       </div>
     </div>
-</div>
+
   </div>
 </div>
