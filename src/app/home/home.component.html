@@ -1,18 +1,32 @@
 <app-star-wars-nav-bar></app-star-wars-nav-bar>
 
 <div class="row homeScreen">
-  <div class="col-md-3 col-md-4 col-sm-12">
+  <div class="col-md-2  col-sm-12">
     <div class="card mainLayout">
       <div class="filterArea">
         <div class="filterText">filters</div>
         <div class="filters">
-          <ng-container *ngFor="let fo of filterOptions">
+          <ng-container>
             <div class="filterOption">
-              <select name="cars" id="cars">
-                <option value="volvo">Movie Name</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+              <select name="movieName">
+                <option value="">Movie Name</option>
+                <option *ngFor="let fo of filmFilterOption">{{fo}}</option>
+                
+              </select>
+              <select name="Species" >
+                <option value="">Species</option>
+                <option *ngFor="let sp of speciesFilterOption">{{sp}}</option>
+                
+              </select>
+              <select name="vehicle" >
+                <option value="">vehicle</option>
+                <option *ngFor="let vl of vehicleFilterOption">{{vl}}</option>
+                
+              </select>
+              <select name="Star Ships" >
+                <option value="">Star Ships</option>
+                <option *ngFor="let vl of vehicleFilterOption">{{vl}}</option>
+                
               </select>
             </div>
           </ng-container>
@@ -24,9 +38,8 @@
     </div>
   </div>
 
-  <div class="col-md-3 col-md-4 col-sm-12 right_side">
+  <div class="col-md-3 col-md-9 col-sm-12 right_side">
     <div class="filterText">Search</div>
-    <div>content</div>
     <table class="table table-bordered">
       <thead>
         <tr>
